@@ -22,15 +22,12 @@ pip install -r requirements.txt
 python plot_digits_of_pi.py
 ```
 
-To change the number of digits analyzed, modify `NUM_DIGITS` in the script:
-
-```python
-NUM_DIGITS = 10000  # Analyze first 10,000 digits
-```
+The script will prompt you for the number of digits to analyze, then display the distribution plot.
 
 ## Example Output
 
 ```
+How many digits of pi to analyze? 10000
 Computing 10000 digits of pi...
 
 Distribution of first 10000 digits of pi:
