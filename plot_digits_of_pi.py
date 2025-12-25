@@ -61,7 +61,7 @@ def plot_pi_distribution(num_digits: int) -> None:
     
     plt.tight_layout()
     plt.savefig('pi_distribution.png', dpi=150)
-    plt.close()
+    plt.show()
     
     # Print summary statistics
     print(f"\nDistribution of first {num_digits} digits of pi:")
@@ -75,7 +75,14 @@ def plot_pi_distribution(num_digits: int) -> None:
 
 
 if __name__ == "__main__":
-    # You can change this value to analyze different numbers of digits
-    NUM_DIGITS = 500
-    plot_pi_distribution(NUM_DIGITS)
+    while True:
+        try:
+            num_digits = int(input("How many digits of pi to analyze? "))
+            if num_digits <= 0:
+                print("Please enter a positive number.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+    plot_pi_distribution(num_digits)
     print(f"\nPlot saved to pi_distribution.png")
