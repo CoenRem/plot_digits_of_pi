@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+pi_distribution.png
+.venv/
+venv/
+.idea/
+.vscode/
+.claude/
